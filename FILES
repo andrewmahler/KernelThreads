@@ -2,5 +2,6 @@ kernel - kernel and booting
 user - user level programs
 include - shared header files for both kernel and user
 tools - tools to run on the host machine
-README - project description
+README.md - project description
+README - (in kernel folder) describes how to run OS
 Makefile - build instructions for GNU make
