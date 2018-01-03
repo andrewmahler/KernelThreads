@@ -1,1 +1,5 @@
-# KernelThreads
+This is the code for a basic operating system called "xv6". There is a separate README for how to use this operating system to test changes in the ./kernel/ directory. 
+
+This operating system works fine by itself, however in this version of the operating system it reflects changes that I have made myself to the OS. For this project I added multi-threaded functionalities to the OS. On the user side, this new functionality is reflected by some new system calls that I created as well. 
+
+When using threads it is very important in lots of situations to maintain atomicity in code. On top of creating the system calls clone() and join(), I created a very small thread library as well. clone() creates a new kernel thread, and join() waits for an existing thread to complete. The thread library includes a call to create a thread (because we don't want any user to be able to see the priveleged kernel information that clone() needs, as well as a simple a spin lock that uses an acquire and release function to provide atomicity. 
